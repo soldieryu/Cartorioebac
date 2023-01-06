@@ -56,9 +56,15 @@ int registro() //Função responsável por cadastrar os usuários no sistema
 		fprintf(file,cargo);
 		fclose(file);
 		
-		system("pause");
+			
+			
+	  	
+	
 	   
 }
+
+	
+
 
 int consulta()
 {
@@ -133,6 +139,7 @@ int main()
 	 printf("\t1 - Registrar nomes\n");
 	 printf("\t2 - Consultar nomes\n");
 	 printf("\t3 - Deletar nomes\n\n");
+	 printf("\t4 - Sair do sistema\n\n");
 	 printf("Opção: "); //Fim do menu
 	
 	 scanf("%d", &opcao); //Armazenando a escolha do usuário
@@ -142,7 +149,8 @@ int main()
 	 switch(opcao) //Inicio da seleção do menu
 	 {
 	 	case 1:
-	    registro(); //Chamada de funções
+	    registro(); //Chamada de funções	
+	    system("pause");
 		break;
 		
 		case 2:
@@ -153,6 +161,12 @@ int main()
 		deletar();
 		break;
 		
+		case 4:
+		printf("obrigado por ultilizar o sistema!\n");
+	    return 0;
+	    system("pause");
+		break; 
+			
 				
 		default:
 		printf("Esta opçâo nâo está disponivel!\n");
